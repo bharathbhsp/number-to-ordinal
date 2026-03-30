@@ -99,7 +99,7 @@ See `docs/STEPS.md` for full setup, testing, and publishing flow.
 
 ## Support
 
-- Sponsor: [GitHub Sponsors](https://github.com/sponsors/bharath)
+- Sponsor: [GitHub Sponsors](https://github.com/sponsors/bharathbhsp)
 - Star the repo if it helps your project.
 
 ## License
