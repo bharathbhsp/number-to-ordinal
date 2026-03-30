@@ -1,0 +1,60 @@
+{
+  "name": "number-to-ordinal",
+  "version": "1.0.0",
+  "description": "Tiny, zero-dependency utility to convert numbers to English ordinals.",
+  "keywords": [
+    "ordinal",
+    "number",
+    "typescript",
+    "utility",
+    "formatting"
+  ],
+  "homepage": "https://github.com/bharath/number-to-ordinal#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bharath/number-to-ordinal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bharath/number-to-ordinal/issues"
+  },
+  "license": "MIT",
+  "author": "Bharath",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm run test",
+    "prepublishOnly": "npm run build && npm run check"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/bharath"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^3.2.4",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}
