@@ -39,7 +39,7 @@ Check that only intended files are published (`dist`, `README.md`, `LICENSE`).
 
 ```bash
 npm login
-npm publish --access public
+npm publish --access public 
 ```
 
 ## 6) Post-publish checklist
@@ -47,21 +47,3 @@ npm publish --access public
 - Confirm package page metadata and README rendering on npm.
 - Announce release on r/javascript, r/node, X, LinkedIn, and dev.to.
 - Add package link to repository description.
-
-## 7) GitHub Actions release flow (one tag push)
-
-This repo includes `.github/workflows/ci-publish.yml`:
-
-- Push / PR to `main`: runs typecheck, tests, and build.
-- Push a tag like `v1.0.1`: runs CI and publishes to npm.
-
-Required repository secret:
-
-- `NPM_TOKEN` (npm automation token with publish access)
-
-Release command flow:
-
-```bash
-npm version patch
-git push origin main --follow-tags
-```
